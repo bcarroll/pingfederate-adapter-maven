@@ -7,20 +7,20 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>idp-adapter-example</name>
-    <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <pf-protocolengine.version>10.0.0.15</pf-protocolengine.version>
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>pingfederate</groupId>
             <artifactId>pf-protocolengine</artifactId>
-            <version>8.2.0.12</version>
-            <scope>provided</scope>
+            <version>${pf-protocolengine.version}</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/pf-protocolengine.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.bitbucket.b_c</groupId>
@@ -48,19 +48,16 @@
             <artifactId>hamcrest-all</artifactId>
             <version>1.3</version>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.12</version>
         </dependency>
-
         <dependency>
             <groupId>commons-validator</groupId>
             <artifactId>commons-validator</artifactId>
             <version>1.4.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
